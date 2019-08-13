@@ -125,12 +125,13 @@ for i in (1..9) {
 }
 
 /* Keycap-Profile Modifications */
-.SA .keylabels, .DSA .keylabels {
+.SA .keylabels, .DSA .keylabels, .DSS .keylabels {
   font-family: 'engravers_gothic_fsregular'; /* substitute for Gorton Modified */
 }
 
 .DSA .keylabel9, .DSA .keylabel10, .DSA .keylabel11,
-.SA .keylabel9, .SA .keylabel10, .SA .keylabel11 {
+.SA .keylabel9, .SA .keylabel10, .SA .keylabel11,
+.DSS .keylabel9, .DSS .keylabel10, .DSS .keylabel11 {
   margin-top: -2px;
   font-size: 9px !important;
 }
@@ -138,16 +139,16 @@ for i in (1..9) {
   background: linear-gradient(to right, #00000000 0%, #0000001A 40%, #0000001A 60%, #00000000 100%);
   background-repeat: no-repeat;
 }
-.DSA .keytop, .SA .keytop {
+.DSA .keytop, .SA .keytop, .DSS .keytop {
   background: radial-gradient(ellipse at center, #0000001A 0%, #0000001A 10%, #00000000 100%);
   background-repeat: no-repeat;
 }
 
-.DCS.SPACE .keytop, .OEM.SPACE .keytop, .DSA.SPACE .keytop, .SA.SPACE .keytop {
+.DCS.SPACE .keytop, .OEM.SPACE .keytop, .DSA.SPACE .keytop, .SA.SPACE .keytop, .DSS.SPACE .keytop {
   background: linear-gradient(to bottom, #0000001A 0%, #00000000 20%, #00000000 40%, #0000001A 100%);
   background-repeat: no-repeat;
 }
-.DSA.DISH .keytop, .DSA.HOMING .keytop, .SA.HOMING .keytop {
+.DSA.DISH .keytop, .DSA.HOMING .keytop, .SA.HOMING .keytop, .DSS.DISH .keytop, .DSS.HOMING .keytop {
   background: radial-gradient(circle, #0000001C 50%, #0000000A 60%);
   background-repeat: no-repeat;
 }
@@ -156,7 +157,7 @@ for i in (1..9) {
   background-repeat: no-repeat;
   background-position: center 90%;
 }
-.DSA.HOMING .keylabels, .SA.HOMING .keylabels { background-image: none; }
+.DSA.HOMING .keylabels, .SA.HOMING .keylabels, .DSS.HOMING .keylabels { background-image: none; }
 
 .FLAT .keytop {
   display: none;

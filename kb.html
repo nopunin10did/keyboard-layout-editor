@@ -470,7 +470,7 @@ Nav Bar / Header
                data-hint="Specify the profile and (optionally) the row-number of the selected keys, e.g., 'DCS R1', 'DSA', 'DSA SPACE', etc.
 
                Supported profiles:
-               &nbsp;&bull; SA, DSA, DCS, OEM, CHICKLET, FLAT
+               &nbsp;&bull; SA, DSA, DCS, DSS, OEM, CHICKLET, FLAT
 
                Supported rows:
                &nbsp;&bull; R1, R2, R3, R4, R5, SPACE">
@@ -1335,7 +1335,7 @@ DOT.js Templates
               bottom: Math.min(parms.innercapy+parms.innercapheight, parms.innercapy2+parms.innercapheight2)
             };
           }}
-          {{? sizes.profile==="SA" || sizes.profile==="DSA" }}
+          {{? sizes.profile==="SA" || sizes.profile==="DSA" || sizes.profile==="DSS" }}
             <radialGradient id="{{=theProfile}}" xlink:href="#{{=sizes.profile}}" gradientUnits="userSpaceOnUse"
                             cx="{{=(rect.left+rect.right)/2}}" cy="{{=(rect.top+rect.bottom)/2}}"
                             r="{{=Math.min(rect.right-rect.left, rect.bottom-rect.top)}}"/>
@@ -1393,6 +1393,7 @@ DOT.js Templates
         <stop offset="100%" stop-color="black" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="SA" xlink:href="#DSA" />
+      <radialGradient id="DSS" xlink:href="#DSA" />
     </defs>
 
     <g transform='translate({{=parms.margin}},{{=parms.margin}})'>
